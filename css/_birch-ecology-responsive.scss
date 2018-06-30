@@ -1,0 +1,94 @@
+/* Tab landscape */
+@media only screen and (max-width: 1199px) {
+    
+    .container,
+    .hp-service .col-three,
+    .hp-projects .col-three {padding-left: 15px; padding-right: 15px;}
+    .row {margin-right: -15px; margin-left: -15px;}
+    .h-menu, .menu-main-container {margin-right: 0px;}
+    .topbar .call {	padding-right: 0px;}
+    .main-navigation a {padding-left: 10px; padding-right: 10px;}
+    .hp-banner .caption {-moz-transform: translate(0px, -20%); -webkit-transform: translate(0px, -20%); -o-transform: translate(0px, -20%); -ms-transform: translate(0px, -20%); transform: translate(0px, -20%);}
+    .hp-who-we-are p {padding-left: 0px; padding-right: 0px;}
+    .hp-service a {margin-bottom: 30px;}
+    .hp-content h3 {font-size: 50px; width: 60%; line-height: 50px;}
+    .hp-content li {padding-left: 48px; font-family: 'Cabin'; font-size: 24px; font-weight: 700; line-height: 30px;}
+    .hp-projects h3 {margin-right: 0px; letter-spacing: 0px;}
+    .hp-projects h3 {min-height: 85px;}
+    .home .wrapper { padding: 0px;}
+    
+}
+
+/* End of max 1199px */
+
+/* Tab portrait */
+@media only screen and (max-width: 991px) {
+    .topbar .call {padding-left: 15px;}
+    .main-navigation a {padding-left: 8px; padding-right: 8px; font-size: 24px;}
+    .logo {width: 25% !important;}
+    .main-navigation {width: 75%;}
+    .hp-banner .caption {max-width: 500px;}
+    .hp-banner .caption h2 {font-size: 50px; line-height: 50px;}
+    .hp-banner .caption p {font-size: 26px;}
+    .hp-banner .caption .banner-btn {font-size: 28px; padding: 12px 48px 10px 48px; margin-top: 16px; line-height: 36px;}
+    .col-three {width: 50%;}
+    .hp-service {text-align: left;}
+    .hp-service h3 { text-align: center;}
+    .hp-content h3 {font-size: 40px; width: 100%; line-height: 40px;}
+    .hp-content .text {width: 70%;}
+    .hp-projects .row {text-align: left;}  
+    .hp-projects .thumbnail {margin-bottom: 30px;}
+    .hp-projects .project-btn {margin-top: 30px;}
+    
+}
+/* End of max 991px */
+
+/* Mobile  landscape */
+@media only screen and (max-width: 767px) {
+    .logo, h1.logo, .logo a, h1.logo a {height: auto;}
+    .home .header {position: relative;}
+    .logo {width: 100% !important;}
+    .logo img {display: block; left: auto; top: auto; display: block; margin: auto;}
+    .topbar .social {display: none;}
+    .main-navigation {width: 100%;}
+    .topbar .call {display: none;}
+    .h-menu, .menu-main-container {text-align: center; margin-top: 0px; margin-bottom: 10px;}
+    .main-navigation .menu-main-container {max-height: 0px; overflow: hidden; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+    .main-navigation.toggled .menu-main-container {max-height: 300px;}
+    button.menu-toggle {background: #295570; padding: 10px 30px !important;}
+    .header .resp-phone {display: block;}
+    .header .resp-phone a {font-size:19px; font-family:'Cabin SemiBold'; font-weight: 700;}
+    .hp-banner .caption {background: #295570; padding: 50px 10px;  position: relative; top: auto; -moz-transform: none;	-webkit-transform: none;-o-transform: none; -ms-transform: none; transform: none;}
+    .hp-banner .caption h2 {text-shadow:none;}
+    .hp-who-we-are {padding-top: 30px; padding-bottom: 10px;}
+    .hp-service {padding-top: 30px; padding-bottom: 30px;}
+    .hp-service h2 {margin-bottom: 20px;}
+    .col-three {width: 100%;}
+    .hp-content::after {background: rgba(68, 110, 137, 1); width: 100%; display: block; -moz-transform: none;	-webkit-transform: none;
+	transform: none; padding: 0px; margin: 0px;	display: block; left: 0px; top: 0px; bottom: 0px;}
+    .hp-content .text {width: 100%;}
+    .hp-content {margin-top: 0px; margin-bottom: 0px; padding-top: 50px; padding-bottom: 50px;}
+    .hp-projects {padding-top: 30px; padding-bottom: 50px;}
+    .hp-projects .thumbnail .img {height: auto;}
+    .hp-projects h3 {min-height: inherit;}
+    .hp-projects h2 {margin-bottom: 30px;}
+}
+/* End of max 767px */
+
+/* Mobile portrait */
+@media only screen and (max-width: 479px) {
+    .hp-banner .caption h2 {font-size: 30px; line-height: 30px;}
+    .hp-banner .caption p {font-size: 16px;}
+    .hp-banner .caption .banner-btn {font-size: 20px; padding: 6px 30px 4px 30px; line-height: 36px;}
+    .hp-who-we-are h2, .hp-service h2, .hp-projects h2 {font-size: 30px;}
+    .hp-who-we-are p { font-size: 16px; line-height: 28px; margin-bottom: 20px;}
+    .hp-service h3 {font-size: 24px; line-height: 32px;}
+    .hp-content h3 {font-size: 30px; width: 100%; line-height: 30px;}
+    .hp-content li {padding-left: 30px; font-size: 16px; line-height: 24px;}
+    .hp-projects h3 {font-size: 20px; margin-top: 10px; display: block; margin-bottom: 10px;}
+    .hp-projects p {font-size: 16px; line-height: 28px;}
+    .hp-projects .project-btn {font-size: 22px; padding: 8px 30px 8px 30px;}
+    .hp-projects .thumbnail .project-btn {font-size: 20px;padding: 5px 20px 5px 20px; margin-top: 0px;}
+}
+/* End of max 479px */
+

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+
+@font-face {
+    font-family:'Cabin';
+    src: url('#{$fa-font-path}/fonts/Cabin-Bold.eot');
+	src: url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Bold.eot?#iefix') format('embedded-opentype'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Bold.woff2') format('woff2'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Bold.woff') format('woff'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Bold.ttf') format('truetype'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Bold.svg#Cabin Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+
+@font-face {
+    font-family:'Cabin';
+    src: url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Regular.eot');
+	src: url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Regular.eot?#iefix') format('embedded-opentype'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Regular.woff2') format('woff2'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Regular.woff') format('woff'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Regular.ttf') format('truetype'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-Regular.svg#Cabin Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+@font-face {
+    font-family:'Cabin SemiBold';
+    src: url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-SemiBold.eot');
+	src: url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-SemiBold.woff2') format('woff2'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-SemiBold.woff') format('woff'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-SemiBold.ttf') format('truetype'),
+		url('http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/fonts/Cabin-SemiBold.svg#Cabin SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+body {overflow-x: hidden; position: relative; margin:0px; padding:0px; font-family: 'Roboto Condensed', sans-serif; background: none;}
+html, body {height: 100%;}
+*:focus {outline: none;}
+a:focus {outline: none;}
+*:active {outline: none;}
+a:active {outline: none;}
+*:hover {outline: none;}
+a:hover {outline: none; color: #000}
+a {color:#000000; text-decoration: none; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+
+img { border: 0px; vertical-align: top; max-height: 100%;}
+
+div {word-wrap: normal; word-break: normal; word-break: normal; hyphens: none; -moz-hyphens: none;}
+
+
+h1, h2, h3, h4, h5, h6, p {margin: 0px; padding: 0px; font-family: 'Roboto Condensed', sans-serif; font-weight: 700;}
+
+ul {margin: 0px; padding: 0px;} 
+
+p {font-family:'Cabin'; font-weight: 400; font-size: 26px; line-height: 32px; margin-bottom: 20px;}
+
+.main-navigation a {font-family: 'Roboto Condensed', sans-serif; font-weight: 700; background: none !important;}
+
+
+.container {width: 1345px; margin: auto; max-width: 100%; padding-left: 25px; padding-right: 25px; display: block;}  
+
+.row:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0px; height: 0px;}
+.row {display: block; margin-right: -25px; margin-left:-25px;}
+
+.col-three {display: inline-block; vertical-align: top; margin-right: -4px; width: 33.33%; padding-left: 25px; padding-right: 25px; -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+
+.home .header { position: absolute; left: 0px; right: 0px; top: 0px; z-index: 1;}
+.header {background: rgba(255,255,255,0.57); padding-bottom: 0px;}
+.header .resp-phone { display: none;}
+.topbar {text-align: right; background: rgba(255,255,255,0.6); display: block; padding: 8px 0px 2px 0px;}
+.topbar .social,
+.topbar .call { display: inline-block; vertical-align: middle; margin-right: -4px;}
+.topbar .social ul {list-style: none;}
+.topbar .social li {display: inline-block; vertical-align: middle; font-size: 25px; padding-left: 15px; padding-right: 15px; line-height: inherit;}
+.topbar .social li a {color: #2a5570;}
+.topbar .social li a:hover { color: #000}
+.topbar .call {font-size:19px; font-family:'Cabin SemiBold'; padding-left: 42px; padding-right: 3px; padding-top: 3px;}
+.topbar .call a {color:#2a5570;}
+.logo img {display: block; position: relative; left: 0px; top: -20px;}
+
+.logo,
+.main-navigation {display: inline-block; vertical-align: middle; margin-right: -4px; background: none;}
+
+
+.logo,
+h1.logo,
+.logo a,
+h1.logo a {height: 103px; width: auto;}
+
+.logo {width: 30% !important; float: none !important;}
+.main-navigation { width: 70%; text-align: right;}
+.main-navigation ul {text-align: right; display: block;}
+.main-navigation li {border: 0px; line-height: normal;}
+.main-navigation a {font-size: 28px; color: #2a5570; padding-left: 21px; padding-right: 22px;}
+.main-navigation li:last-child a { padding-right: 0px;}
+.h-menu,
+.menu-main-container { display: block; text-align: right; margin-right: -3px;}
+
+.hp-banner { position: relative;}
+.hp-banner:after {content: ""; /*background-image: url(http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/images/hp-banner-opacity-bg.png); background-repeat: repeat-x;*/ position: absolute; left: 0px; right: 0px; bottom: 0px; display: block; top: 150px; /*background-position: center bottom;*/ background: rgb(0,0,0);
+background: -moz-linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
+background: -ms-linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
+background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
+/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);*/}
+
+@media all and (min-width:0\0) and (min-resolution:.001dpcm)
+{
+    .hp-banner:after {background-color:  rgba(0,0,0,0); background-image: url(http://birch.bellaworksdev.com/wp-content/themes/birch-ecology/images/hp-banner-opacity-bg.png); background-repeat: repeat-x;}
+}
+
+.hp-banner img {width: 100%; /*height: 964px;*/}
+.hp-banner .caption { position: absolute; left: 0px; right: 0px; max-width: 600px; margin: auto; /*top: 468px;*/ top: 50%; z-index: 2; text-align: center; -moz-transform: translate(0px, -5%); -webkit-transform: translate(0px, -5%); -o-transform: translate(0px, -5%); -ms-transform: translate(0px, -5%); transform: translate(0px, -5%);}
+.hp-banner .caption h2 {font-size: 61px; color: #fff; line-height: 72px; text-shadow: 0px 0px 30px #111, 0px 0px 30px #111;}
+.hp-banner .caption p {font-size: 32px; font-family:'Cabin SemiBold'; color: #fff; margin-top: 16px;}
+.hp-banner .caption .banner-btn {font-size: 33px; color: white; text-transform: uppercase; font-weight: 700; display: inline-block; padding: 14px 53px 12px 53px; border-radius: 100px; border: 2px #fff solid; background: rgba(255,255,255,0.31); margin-top: 45px; line-height: 40px;}
+.hp-banner .caption .banner-btn:hover { background: #fff; color: #2a5570;}
+
+.hp-who-we-are {padding-top: 54px; padding-bottom: 62px;}
+
+.hp-who-we-are h2,
+.hp-service h2,
+.hp-projects h2 {text-align: center; font-size: 51px; text-transform: uppercase; color: #446e89; margin-bottom: 12px;}
+.hp-who-we-are p {font-size: 26px; padding-left: 140px; padding-right: 140px; line-height: 38px; letter-spacing: 0.2px; line-height: 38px; margin-bottom: 37px; color: #000;}
+
+.hp-service {display: block; padding-top: 56px; background:#f2f2f2; text-align: center; padding-bottom: 65px;}
+.hp-service h2 {margin-bottom: 80px;}
+.hp-service a {position: relative; display: block; margin-bottom: 50px;}
+.hp-service a:after {content: ""; background: rgba(0,0,0,0.2); position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+.hp-service a:hover:after {background: rgba(0,0,0,0);}
+.hp-service h3 {position: absolute; left: 0px; right: 0px; top: 50%; -moz-transform: translate(0px, -50%); -webkit-transform: translate(0px, -50%); -o-transform: translate(0px, -50%); -ms-transform: translate(0px, -50%); transform: translate(0px, -50%); font-size: 33px; font-weight: 700; color: white; z-index: 1; text-transform: uppercase; line-height: 40px; padding-left: 15px; padding-right: 15px;}
+.hp-service .col-three {padding-left: 27px; padding-right: 27px;}
+/*.hp-service img { max-height: 269px; width: 100%;}*/
+
+.hp-content {background-size: cover; position: relative; margin-top: 10px; margin-bottom: 10px; padding-top: 88px; padding-bottom: 135px; background-position: center top;}
+.hp-content:after {content: ""; background: rgba(68,110,137,0.66);   width: 80%; border: none; display:inline-block; height:auto; -moz-transform: 	scaleX(1) scaleY(1) scaleZ(1) skewX(-12deg); -webkit-transform:  scaleX(1) scaleY(1) scaleZ(1) skewX(-12deg); transform: scaleX(1) scaleY(1) scaleZ(1) skewX(-12deg); transform-origin: 50% 50%; padding:0px; margin:0px; position: absolute; display: block; left: -10%; top: -2px; bottom: 0px;}
+.hp-content .text {position: relative; z-index: 1; color: white;}
+.hp-content h3 {font-size: 56px; text-transform: uppercase; width: 50%; line-height: 56px; margin-bottom: 20px; display: block;}
+.hp-content ul {list-style: none;}
+.hp-content li {position: relative; padding-left: 48px; font-family:'Cabin'; font-size: 31px; font-weight: 700; line-height: 44px;}
+.hp-content li:before {content: "\f00c"; font-family: 'FontAwesome'; position: absolute; left: 0px; top: 0px; font-weight: normal;}
+
+.hp-projects {display: block; background: #f2f2f2; padding-top: 52px; text-align: center; padding-bottom:74px;}
+.hp-projects h2 { margin-bottom: 60px;}
+.hp-projects .col-three {padding-left: 27px; padding-right: 27px;}
+.hp-projects .thumbnail {padding: 12px 12px 25px 12px; display: block; box-shadow: 0px 0px 30px rgba(2,2,2,0.17); background: #fff; text-align: center; border-bottom: 9px solid #d1d1d1;}
+/*.hp-projects .thumbnail img {max-height: 255px; width: 100%;}*/
+.hp-projects h3 {font-size: 28.5px; text-transform: uppercase; color: #153b55; font-weight: 700; margin-top: 10px; display: block; margin-right: -15px; letter-spacing: -0.3px; margin-bottom: 22px; text-align: left;}
+.hp-projects p {font-size: 22px; line-height: 33px; color: #000; /*overflow: hidden; max-height:124px;*/ text-align: left;}
+.hp-projects .project-btn {font-size: 36px; background: #fff; color: #86331b; text-transform: uppercase; font-weight: 700; display: inline-block; padding:14px 55px 12px 55px; border-radius: 100px; border: 1px #86331b solid; line-height: 40px; margin-top: 100px;}
+.hp-projects .project-btn:hover {background: #86331b; color: #fff;}
+.hp-projects .thumbnail .project-btn {font-size: 27px; padding: 8px 55px 8px 55px; margin-top: 16px; }
+.hp-projects .thumbnail .img {height: 248px; width: 100%; display: block;}
+
+.site-footer {background-color: #446e89; text-align: center; font-family:'Cabin';}
+.site-footer .wrapper {width: 100%;}
+.site-footer .footer-info {display: block; padding-bottom: 63px; padding-top: 33px;}
+.site-footer .social { margin-bottom: 55px;}
+.site-footer .social ul {list-style: none;}
+.site-footer .social li {display: inline-block; vertical-align: middle; font-size: 44px; padding-left: 30px; padding-right: 30px; line-height: inherit;}
+.site-footer .social li a {color: #fff;}
+.site-footer .social li a:hover {color: #000}
+.site-footer .call { font-size:30px; color: #fff; font-weight: 700;}
+.site-footer .call a {color: white;}
+.site-footer .call a:hover {color: black;}
+.site-footer .site-info {background: #383838; font-size: 19px; text-transform: uppercase; color: white; font-family:'Cabin'; font-weight: 400; padding: 26px 0px; letter-spacing: 0.5px;}
+
+/*font-family:'Cabin';*/
+/*font-family:'Cabin SemiBold';*/
+/*font-family: 'Roboto Condensed', sans-serif;*/
