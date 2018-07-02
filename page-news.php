@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Projects
+ * Template Name: News
  */
 
 get_header(); 
