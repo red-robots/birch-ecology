@@ -1795,6 +1795,8 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .wrapper{width:100%;margin:0 auto;padding:20px}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
+}section.intro{width:100%}
+@media screen and (min-width:1200px){section.intro{width:60%;margin:0 auto}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
@@ -1831,7 +1833,7 @@ p{font-family:'Cabin';font-weight:400;font-size:26px;line-height:32px;margin-bot
 .container{width:1345px;margin:auto;max-width:100%;padding-left:25px;padding-right:25px;display:block}
 .row:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 .row{display:block;margin-right:-25px;margin-left:-25px}
-.col-three{display:inline-block;vertical-align:top;margin-right:-4px;width:33.33%;padding-left:25px;padding-right:25px;box-sizing:border-box}
+.col-three{display:inline-block;vertical-align:top;margin-right:-4px;margin-bottom:50px;width:33.33%;padding-left:25px;padding-right:25px;box-sizing:border-box}
 .home .header{position:absolute;left:0;right:0;top:0;z-index:1}
 .header{background:rgba(255,255,255,0.57);padding-bottom:0}
 .header .resp-phone{display:none}

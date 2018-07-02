@@ -34,7 +34,7 @@ function our_service_func( $atts ) {
 
    $ser_arg = array(
                 'post_type'         => 'service',
-                'posts_per_page'    => '9',
+                'posts_per_page'    => '-1',
                 //'orderby'          => 'menu_order',
                 'order'            => 'ASC',
                 );

@@ -30,7 +30,16 @@ div {
 		padding: 0px;
 	}
 }
-
+section.intro {
+	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 60%;
+		margin: 0 auto;
+	}
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -243,7 +252,16 @@ p {
 
 .col-three {
 	display: inline-block; 
-	vertical-align: top; margin-right: -4px; width: 33.33%; padding-left: 25px; padding-right: 25px; -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+	vertical-align: top; 
+	margin-right: -4px; 
+	margin-bottom: 50px;
+	width: 33.33%; 
+	padding-left: 25px; 
+	padding-right: 25px; 
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
 
 .home .header { position: absolute; left: 0px; right: 0px; top: 0px; z-index: 1;}
 .header {background: rgba(255,255,255,0.57); padding-bottom: 0px;}
