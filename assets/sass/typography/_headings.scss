@@ -11,7 +11,8 @@ h1.entry-title {
 	text-transform: uppercase; 
 	color: $color-blue; 
 	margin-bottom: 12px;
-	margin: 50px 0 0 0;
+	line-height: 1;
+	// margin: 50px 0 0 0;
 	@media screen and (min-width: $tabwidth) {
 		font-size: 40px;
 	}
@@ -21,4 +22,7 @@ h1.entry-title {
 	@media screen and (min-width: $deskwidth) {
 		font-size: 51px;
 	}
+}
+.single h1.entry-title {
+	text-align:left;
 }

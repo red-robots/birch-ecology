@@ -39,7 +39,7 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 
 			$ser_arg = array(
                 'post_type'         => 'project',
-                'posts_per_page'    => '9',
+                'posts_per_page'    => '-1',
                 //'orderby'          => 'menu_order',
                 'order'            => 'ASC',
                 'paged' => $paged,

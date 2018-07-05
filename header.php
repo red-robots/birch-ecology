@@ -29,7 +29,7 @@
 
 // see if we need to push the content down or not.
 $banner_image = get_field('banner_image');
-if( !empty($banner_image) && $banner_image['url'] !='' || is_front_page() ){
+if( !empty($banner_image) && $banner_image['url'] !='' || is_front_page() || has_post_thumbnail() ){
     $contentClass = 'yes-image';
 } else {
     $contentClass = 'no-image';

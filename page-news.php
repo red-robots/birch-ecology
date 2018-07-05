@@ -53,13 +53,13 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
         				<div class="wrapper">
 			        <?php while ($ser_loop->have_posts()) { $ser_loop->the_post() ; 
 			            
-			            $feature_image = get_field('featured_image',get_the_ID());
+			           
 			            ?>
 			                <div class="col-three">
 			                    <div class="thumbnail">
-			                        <?php if($feature_image['url'] != ''){ ?>
-			                        <div class="img">
-			                            <img src="<?php echo $feature_image['url'];?>" alt="<?php echo $feature_image['alt'];?>" />
+			                        <?php if ( has_post_thumbnail() ) { ?>
+			                        <div class="img-post">
+			                           <?php the_post_thumbnail(); ?>
 			                        </div>
 			                        <?php } ?>
 			                        <h3><?php the_title();?></h3>
@@ -68,7 +68,7 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 			                            echo '<p>'.mb_strimwidth(get_the_content(), 0, 158, '...').'</p>';
 			                        }
 			                        ?>
-			                        <a href="<?php the_permalink();?>" class="project-btn">VIEW PROJECT</a>
+			                        <a href="<?php the_permalink();?>" class="project-btn">READ MORE</a>
 			                        
 			                    </div>
 			                </div>

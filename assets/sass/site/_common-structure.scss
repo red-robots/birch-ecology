@@ -1,21 +1,4 @@
-* { -webkit-hyphens: none; }
-div {
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
 
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
-}
 .clear {clear: both;}
 .wrapper {
 	width: 100%;
@@ -344,12 +327,20 @@ background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
 .hp-projects .col-three {padding-left: 27px; padding-right: 27px;}
 .hp-projects .thumbnail {padding: 12px 12px 25px 12px; display: block; box-shadow: 0px 0px 30px rgba(2,2,2,0.17); background: #fff; text-align: center; border-bottom: 9px solid #d1d1d1;}
 /*.hp-projects .thumbnail img {max-height: 255px; width: 100%;}*/
-.hp-projects h3 {font-size: 28.5px; text-transform: uppercase; color: #153b55; font-weight: 700; margin-top: 10px; display: block; margin-right: -15px; letter-spacing: -0.3px; margin-bottom: 22px; text-align: left;}
-.hp-projects p {font-size: 22px; line-height: 33px; color: #000; /*overflow: hidden; max-height:124px;*/ text-align: left;}
+.hp-projects h3 {font-size: 22px; text-transform: uppercase; color: #153b55; font-weight: 700; margin-top: 10px; display: block; margin-right: -15px; letter-spacing: -0.3px; margin-bottom: 22px; text-align: left;}
+.hp-projects p {
+	font-size: 18px; 
+	line-height: 1.4; 
+	color: #000; /*overflow: hidden; max-height:124px;*/ 
+	text-align: left;
+}
 .hp-projects .project-btn {font-size: 36px; background: #fff; color: #86331b; text-transform: uppercase; font-weight: 700; display: inline-block; padding:14px 55px 12px 55px; border-radius: 100px; border: 1px #86331b solid; line-height: 40px; margin-top: 100px;}
 .hp-projects .project-btn:hover {background: #86331b; color: #fff;}
-.hp-projects .thumbnail .project-btn {font-size: 27px; padding: 8px 55px 8px 55px; margin-top: 16px; }
-.hp-projects .thumbnail .img {height: 248px; width: 100%; display: block;}
+.hp-projects .thumbnail .project-btn {font-size: 20px; padding: 8px 55px 8px 55px; margin-top: 16px; }
+.hp-projects .thumbnail .img {
+	// height: 248px; 
+	width: 100%; 
+	display: block;}
 
 .site-footer {
 	background-color: $color-blue; 
@@ -486,7 +477,7 @@ article#page {
 	@media screen and (min-width: $tabwidth) {
 		padding: 40px 0;
 	}
-	p {
+	p, li {
 		font-size: 18px;
 	}
 	ul {

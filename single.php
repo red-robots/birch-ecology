@@ -7,29 +7,38 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+if ( has_post_thumbnail() ) { 
+?>
+<div class="home-pg">
+	<div class="hp-banner">
+		<?php the_post_thumbnail(); ?>
+	</div>
+</div>
+<?php } ?>
 
-		<?php
-		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation();
+<section class="page">
+	<div class="wrapper">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			<?php
+			while ( have_posts() ) : the_post();
 
-		endwhile; // End of the loop.
-		?>
+				get_template_part( 'template-parts/content', get_post_format() );
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			endwhile; // End of the loop.
+			?>
 
-<?php
-get_sidebar();
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+	<?php
+	get_sidebar('service'); ?>
+	</div>
+</section>
+<?php 
 get_footer();
