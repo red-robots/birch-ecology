@@ -9,7 +9,7 @@
 
 get_header(); 
 
-$banner_image = get_field('banner_image');
+$banner_image = get_field('banner');
 if(!empty($banner_image) && $banner_image['url'] !=''){
 ?>
 <div class="home-pg">
