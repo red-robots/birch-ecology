@@ -287,3 +287,14 @@ a.post-edit-link {
 .services-page-wrap .wrapper {
     position:relative;
 }
+
+.sitemap {
+    margin-top: 50px;
+    .page-link-list {
+        text-align: center;
+        ul.linklist {
+            display: inline-block;
+            text-align: left;
+        }
+    }
+}

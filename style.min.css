@@ -2036,6 +2036,9 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 .burgerNav.open span:before{-webkit-transform:translateY(9px) rotate(45deg);-ms-transform:translateY(9px) rotate(45deg);transform:translateY(9px) rotate(45deg)}
 .burgerNav.open span:after{top:8px;-webkit-transform:translateY(-9px) rotate(-45deg);-ms-transform:translateY(-9px) rotate(-45deg);transform:translateY(-9px) rotate(-45deg)}
 .services-page-wrap .wrapper{position:relative}
+.sitemap{margin-top:50px}
+.sitemap .page-link-list{text-align:center}
+.sitemap .page-link-list ul.linklist{display:inline-block;text-align:left}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
