@@ -2004,10 +2004,10 @@ article#page ul{margin:0 0 20px 0;padding:0 0 0 40px}
 }.svc-info .svc_title{margin:0 0 15px;font-size:35px;line-height:1.2;color:#446e89}
 .svc-info .textwrap{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;font-size:18px}
 .svc-info .textwrap p{font-size:18px;margin-top:0;margin-bottom:1.5em}
-@media screen and (min-width:780px){.svc-info .textwrap.half{width:60%;float:left}
-}.svc-info .imagewrap{width:100%}
-@media screen and (min-width:780px){.svc-info .imagewrap{width:38%;float:right}
-}.svc-info .imagewrap img{width:100%;height:auto}
+.svc-info .imagewrap{width:100%;border:1px solid #dbdbdb;box-shadow:0 .125em .275em 0 rgba(0,0,0,0.075);border-radius:4px;border-bottom-width:3px}
+.svc-info .imagewrap img{width:100%;height:auto}
+.svc-info .imagewrap .wrap{padding:6px 6px}
+.svc-info .image-caption{padding-top:8px;padding-bottom:2px;font-size:16px;color:#878788;text-align:center}
 a.post-edit-link{color:#86331b;text-decoration:underline}
 .services-sidebar{position:relative;top:0;right:0;width:90%;z-index:50}
 .services-sidebar.small-screen{display:block}

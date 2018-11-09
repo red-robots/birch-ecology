@@ -81,8 +81,8 @@ function our_project_func( $atts ) {
     ?>
     <?php if( $ser_loop->have_posts() ) { ?>
         <?php while ($ser_loop->have_posts()) { $ser_loop->the_post() ; 
-            
-            $feature_image = get_field('featured_image',get_the_ID());
+            //$feature_image = get_field('featured_image',get_the_ID());
+            $feature_image = get_field('banner_image',get_the_ID());
             ?>
                 <div class="col-three">
                     <div class="thumbnail">

@@ -33,10 +33,15 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
                 <?php if( $bullets = get_field('services') ) { ?>
                     <div class="services-item-section">
                         <?php $i=1; foreach($bullets as $b) { 
+                        $description = $b['service_description'];
                         $title = $b['service_title'];
                         $string = preg_replace('/\s+/','', $title);
                         $img = $b['service_image'];
-                        $description = $b['service_description'];
+                        $image_caption = '';
+                        if($img) {
+                            $img_string = preg_replace('/\s+/','', $img['caption']);
+                            $image_caption = ($img_string) ? $img['caption'] : '';
+                        }
                         if( $string ) {
                             $sectionID = sanitize_title_with_dashes($title); ?>
                             <div id="<?php echo $sectionID;?>" class="svc-info clear<?php echo ($i==1) ? ' first':'';?>">
@@ -48,7 +53,12 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
                                 </div>
                                 <?php if($img) { ?>
                                 <div class="imagewrap">
-                                    <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>" />
+                                    <div class="wrap">
+                                        <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>" />
+                                        <?php if( $image_caption ) { ?>
+                                        <div class="image-caption"><?php echo $image_caption;?></div>
+                                        <?php } ?>
+                                    </div>
                                 </div>
                                 <?php } ?>
                             </div>
