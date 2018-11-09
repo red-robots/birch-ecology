@@ -7,11 +7,39 @@
  * @package ACStarter
  */
 
-$bullets = get_field('bullet_points');
+//$bullets = get_field('bullet_points');
+$bullets = get_field('services');
+if($bullets) {
+    $links = array();
+    foreach($bullets as $b) {
+        $title = $b['service_title'];
+        $string = preg_replace('/\s+/','', $title);
+        if( $string ) {
+           $slug = sanitize_title_with_dashes($title);
+           $links[] = array($slug,$title);
+        }
+    }
 ?>
-
-<aside id="secondary" class="widget-area" role="complementary">
+<?php if($links) { ?>
+<aside id="secondary" class="widget-area desktop services-sidebar sticky" role="complementary">
 	<div class="widget service-side">
-		<?php echo $bullets; ?>
+        <ul class="services_sublinks">
+        <?php foreach($links as $a) { ?>
+            <li><a href="#<?php echo $a[0];?>"><?php echo $a[1];?></a></li>
+        <?php } ?>
+        </ul>
 	</div>
 </aside><!-- #secondary -->
+<aside id="secondary_mobile" class="widget-area small-screen services-sidebar" role="complementary">
+	<a id="sidebarNavMobile" class="burgerNav"><span></span></a>
+    <span class="active-section"><?php echo get_the_title();?></span>
+    <div id="svclinks" class="widget service-side">
+        <ul class="services_sublinks">
+        <?php foreach($links as $a) { ?>
+            <li><a href="#<?php echo $a[0];?>"><?php echo $a[1];?></a></li>
+        <?php } ?>
+        </ul>
+	</div>
+</aside><!-- #secondary -->
+<?php } ?>
+<?php } ?>

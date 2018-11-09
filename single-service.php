@@ -20,30 +20,50 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 <?php } ?>
 
 <section class="page">
-	<div class="wrapper">
+	<div class="wrapper clear">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
-
 				get_template_part( 'template-parts/content', get_post_format() );
-
-				the_post_navigation();
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
 			endwhile; // End of the loop.
 			?>
-
+                
+                <?php if( $bullets = get_field('services') ) { ?>
+                    <div class="services-item-section">
+                        <?php $i=1; foreach($bullets as $b) { 
+                        $title = $b['service_title'];
+                        $string = preg_replace('/\s+/','', $title);
+                        $img = $b['service_image'];
+                        $description = $b['service_description'];
+                        if( $string ) {
+                            $sectionID = sanitize_title_with_dashes($title); ?>
+                            <div id="<?php echo $sectionID;?>" class="svc-info clear<?php echo ($i==1) ? ' first':'';?>">
+                                <h3 class="svc_title"><?php echo $title;?></h3>
+                                <div class="textwrap <?php echo ($img) ? 'half':'full' ?>">
+                                    <div class="pad clear">
+                                        <?php echo $description;?>
+                                    </div>
+                                </div>
+                                <?php if($img) { ?>
+                                <div class="imagewrap">
+                                    <img src="<?php echo $img['url'];?>" alt="<?php echo $img['title'];?>" />
+                                </div>
+                                <?php } ?>
+                            </div>
+                        <?php $i++; } ?>
+                        <?php } ?>
+                    </div>
+                    <div class="sticky-stopper"></div>
+                <?php } ?>
+                
 			</main><!-- #main -->
 		</div><!-- #primary -->
-
-	<?php
-	get_sidebar('service'); ?>
+    
+	<?php get_sidebar('service'); ?>
 	</div>
+    
+    
 </section>
 <?php get_footer();

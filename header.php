@@ -17,12 +17,10 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i|Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 <!--<link href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" rel="stylesheet" />
 <link href="<?php echo get_template_directory_uri(); ?>/css/birch-ecology-custom.css" type="text/css" rel="stylesheet" />-->
-
-
-<script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
 
 <?php wp_head(); 

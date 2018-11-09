@@ -29,7 +29,7 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 	<div class="wrapper">
-		<div id="primary" class="content-area">
+		<div id="primary" class="content-area-full">
 			<main id="main" class="site-main" role="main">
 
 			<?php

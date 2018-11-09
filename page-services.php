@@ -16,23 +16,21 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 </div>
 <?php } ?>
 
-<section class="page">
+<section class="page services-page-wrap">
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 	
-		<div id="primary" class="content-area-full">
+		<div id="primary" class="content-area-full services-page">
 			<main id="main" class="site-main" role="main">
 				<div class="wrapper">
-					<section class="intro">
-						<?php
-						while ( have_posts() ) : the_post();
+					<?php
+                    while ( have_posts() ) : the_post();
 
-							get_template_part( 'template-parts/content', 'page' );
+                        get_template_part( 'template-parts/content', 'page' );
 
-						endwhile; // End of the loop.
-						?>
-					</section>
+                    endwhile; // End of the loop.
+                    ?>
 				</div>
 			<?php 
 			
