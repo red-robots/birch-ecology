@@ -7,8 +7,6 @@
  * @package ACStarter
  */
 
-
-
 $services = get_field('services');
 if( $services ) {  ?>
 <aside id="secondary" class="widget-area" role="complementary">
