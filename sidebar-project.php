@@ -7,18 +7,16 @@
  * @package ACStarter
  */
 
-$svc_args = array(
-    'post_type'     => 'service',
-    'posts_per_page'=> '-1',
-    'order'         => 'ASC'
-);
-$svcs   = get_posts($svc_args);
-if( $svcs ) {  ?>
+
+
+$services = get_field('services');
+if( $services ) {  ?>
 <aside id="secondary" class="widget-area" role="complementary">
 	<div class="widget service-side">
+        <h3 class="widget-title">Services Provided</h3>
         <ul class="services_sublinks">
-        <?php foreach($svcs as $row) { $id = $row->ID; ?>
-            <li><a href="<?php echo get_permalink($id);?>"><?php echo get_the_title($id);?></a></li>
+        <?php foreach($services as $row) { $id = $row->ID; ?>
+            <li><a href="<?php echo get_permalink($id);?>"><?php echo $row->post_title;?></a></li>
         <?php } ?>
         </ul>
 	</div>
