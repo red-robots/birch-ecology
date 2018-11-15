@@ -2049,6 +2049,8 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 .galleryWrapper .caption{padding-top:10px;padding-bottom:3px;font-size:15px;color:#9b9a9a;text-align:center;line-height:1.2}
 .widget-area .widget-title{font-size:25px;position:relative;left:0;margin:0 0 6px;text-transform:uppercase;color:#446e89;margin-left:15px;margin-top:35px}
 @media screen and (min-width:780px){.widget-area .widget-title{left:-28px;margin-left:0;margin-top:0}
+}.single-project .widget-area{margin-top:10px}
+@media screen and (min-width:780px){.single-project .widget-area{margin-top:60px}
 }.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

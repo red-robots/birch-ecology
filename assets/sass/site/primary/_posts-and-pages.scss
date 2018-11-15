@@ -357,3 +357,12 @@ a.post-edit-link {
         }
     }
 }
+.single-project {
+    .widget-area {
+        margin-top: 10px;
+        @media screen and (min-width: $tabwidth) {
+            margin-top: 60px;
+        }
+    }
+    
+}
