@@ -110,13 +110,37 @@ get_header(); ?>
     $section_title_2 = get_field('section_title_2');
     $button_text_2 = get_field('button_text_2');
     $button_link_2 = get_field('button_link_2');
+    $featured_projects = get_field('project_picker');
     
     ?>
     <div class="hp-projects">
         <div class="container">
             <?php if($section_title_2 != ''){ echo '<h2>'.$section_title_2.'</h2>'; } ?>
             <div class="row">
-                <?php echo do_shortcode('[our_project]'); ?>
+            <?php //echo do_shortcode('[our_project]'); ?>
+            <?php if($featured_projects) { ?>
+                <?php foreach($featured_projects as $p) { 
+                    $post_id = $p->ID; 
+                    $project_info = $p->post_content;
+                    $project_image = get_field('banner_image', $post_id); ?>
+                    <div class="col-three">
+                        <div class="thumbnail">
+                            <?php if($project_image){ ?>
+                                <div class="img">
+                                    <img src="<?php echo $project_image['url'];?>" alt="<?php echo $project_image['title'];?>" />
+                                </div>
+                            <?php } ?>
+                            <h3><?php echo $p->post_title?></h3>
+                            <?php 
+                            if($project_info){
+                                echo '<p>'.mb_strimwidth($project_info, 0, 158, '...').'</p>';
+                            }
+                            ?>
+                            <a href="<?php echo get_the_permalink($post_id);?>" class="project-btn">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                <?php } ?>
+            <?php } ?>
             </div>
             <?php if($button_text_2 != '' && $button_link_2 !='' ){ ?>
             <a href="<?php echo $button_link_2;?>" class="project-btn"><?php echo $button_text_2;?></a>
