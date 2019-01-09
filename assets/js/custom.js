@@ -7,20 +7,9 @@
 
 jQuery(document).ready(function ($) {
 	
-	/*
-	*
-	*	Current Page Active
-	*
-	------------------------------------*/
-	$("[href]").each(function() {
-    if (this.href == window.location.href) {
-        $(this).addClass("active");
-        }
-	});
-    
     
     /* Sticky Sidebar */
-    var $sticky = $('.sticky');
+    var $sticky = $('.sticky, .ie_sidebar');
     var $stickyrStopper = $('.sticky-stopper');
     if (!!$sticky.offset()) { // make sure ".sticky" element exists
         var generalSidebarHeight = $sticky.innerHeight();
@@ -31,18 +20,19 @@ jQuery(document).ready(function ($) {
         var diff = stopPoint + stickOffset;
 
         $(window).scroll(function(){ // scroll event
-          var windowTop = $(window).scrollTop(); // returns number
-
-          if (stopPoint < windowTop) {
-              $sticky.css({ position: 'absolute', top: diff, right:'3%'});
-              $sticky.removeClass('padTop');
-          } else if (stickyTop < windowTop+stickOffset) {
-              $sticky.css({ position: 'fixed', top: stickOffset, right:'3%' });
-              $sticky.addClass('padTop');
-          } else {
-              $sticky.css({position: 'absolute', top: 'initial', right:'3%'});
-              $sticky.removeClass('padTop');
-          }
+            var windowTop = $(window).scrollTop(); // returns number
+            if (stopPoint < windowTop) {
+                $('.ie_sidebar').addClass('fixed');
+                $sticky.css({ position: 'absolute', top: diff, right:'3%'});
+                $sticky.removeClass('padTop');
+            } else if (stickyTop < windowTop+stickOffset) {
+                $sticky.css({ position: 'fixed', top: stickOffset, right:'3%' });
+                $sticky.addClass('padTop');
+            } else {
+                $sticky.css({position: 'absolute', top: 'initial', right:'3%'});
+                $sticky.removeClass('padTop');
+                $('.ie_sidebar').removeClass('fixed');
+            }
         });
     }
  
@@ -57,7 +47,6 @@ jQuery(document).ready(function ($) {
                 $('.scrollup').fadeOut();
                 $('body').removeClass('scrolled');
                 $('#secondary_mobile').removeClass('show');
-                //$('.active-section').text("");
             }
         }); 
     }

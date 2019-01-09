@@ -190,7 +190,7 @@ a.post-edit-link {
             display: block;
         }
         &.padTop {   
-            padding-top:7%;
+            padding-top:5%;
         }
         &.small-screen {
             display: none;
@@ -365,4 +365,9 @@ a.post-edit-link {
         }
     }
     
+}
+
+.home-pg {
+    position: relative;
+    z-index: 80;
 }

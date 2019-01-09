@@ -16,7 +16,8 @@ $classes[] = join(' ', array_filter($browsers, function ($browser) {
 }));
 
 $broswer_type = ( isset($classes[0]) && $classes[0] ) ? $classes[0] : '';
-$is_sticky = ($broswer_type=='is_IE' || $broswer_type=='is_winIE is_IE') ? '':' sticky';
+//$is_sticky = ($broswer_type=='is_IE' || $broswer_type=='is_winIE is_IE') ? ' ie_sidebar':' sticky';
+$is_sticky = ' sticky';
 
 if($bullets) {
     $links = array();

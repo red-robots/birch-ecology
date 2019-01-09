@@ -424,7 +424,7 @@ background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
 }
 /* End of max 479px */
 
-.header { position: absolute; left: 0px; right: 0px; top: 0px; z-index: 1;}
+.header { position: absolute; left: 0px; right: 0px; top: 0px; z-index: 100;}
 section.page {
 	width: 100%;
 	background-color: #fff;

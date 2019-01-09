@@ -1968,7 +1968,7 @@ button.menu-toggle{background:#295570;padding:10px 30px !important}
 .hp-projects p{font-size:16px;line-height:28px}
 .hp-projects .project-btn{font-size:22px;padding:8px 30px 8px 30px}
 .hp-projects .thumbnail .project-btn{font-size:20px;padding:5px 20px 5px 20px;margin-top:0}
-}.header{position:absolute;left:0;right:0;top:0;z-index:1}
+}.header{position:absolute;left:0;right:0;top:0;z-index:100}
 section.page{width:100%;background-color:#fff;float:left;padding:40px 0}
 article#page{width:100%;background-color:#fff;padding:5px 0}
 @media screen and (min-width:780px){article#page{padding:40px 0 0}
@@ -2016,7 +2016,7 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 .services-sidebar.desktop{display:none}
 @media screen and (min-width:780px){.services-sidebar{width:26%}
 .services-sidebar.desktop{display:block}
-.services-sidebar.padTop{padding-top:7%}
+.services-sidebar.padTop{padding-top:5%}
 .services-sidebar.small-screen{display:none}
 }.services-sidebar a{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .services-sidebar a:hover{color:#86331b}
@@ -2051,7 +2051,8 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 @media screen and (min-width:780px){.widget-area .widget-title{left:-28px;margin-left:0;margin-top:0}
 }.single-project .widget-area{margin-top:10px}
 @media screen and (min-width:780px){.single-project .widget-area{margin-top:60px}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.home-pg{position:relative;z-index:80}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
