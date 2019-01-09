@@ -21,6 +21,8 @@ if( in_array('is_winIE',$classes) ||  in_array('is_IE',$classes) ) {
     $is_sticky = ' sticky';
 }
 
+print_r($classes);
+
 if($bullets) {
     $links = array();
     foreach($bullets as $b) {
