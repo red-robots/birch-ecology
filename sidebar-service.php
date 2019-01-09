@@ -9,6 +9,14 @@
 
 //$bullets = get_field('bullet_points');
 $bullets = get_field('services');
+
+$browsers = ['is_iphone', 'is_chrome', 'is_safari', 'is_NS4', 'is_opera', 'is_macIE', 'is_winIE', 'is_gecko', 'is_lynx', 'is_IE', 'is_edge'];
+$classes[] = join(' ', array_filter($browsers, function ($browser) {
+    return $GLOBALS[$browser];
+}));
+$broswer_type = ( isset($classes[0]) && $classes[0] ) ? $classes[0] : '';
+$is_sticky = ($broswer_type=='is_IE') ? '':' sticky';
+
 if($bullets) {
     $links = array();
     foreach($bullets as $b) {
@@ -21,7 +29,7 @@ if($bullets) {
     }
 ?>
 <?php if($links) { ?>
-<aside id="secondary" class="widget-area desktop services-sidebar sticky" role="complementary">
+<aside id="secondary" class="widget-area desktop services-sidebar<?php echo $is_sticky;?>" role="complementary">
 	<div class="widget service-side">
         <ul class="services_sublinks">
         <?php foreach($links as $a) { ?>
