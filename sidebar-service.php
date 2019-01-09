@@ -14,8 +14,12 @@ $browsers = ['is_iphone', 'is_chrome', 'is_safari', 'is_NS4', 'is_opera', 'is_ma
 $classes[] = join(' ', array_filter($browsers, function ($browser) {
     return $GLOBALS[$browser];
 }));
-$broswer_type = ( isset($classes[0]) && $classes[0] ) ? $classes[0] : '';
-$is_sticky = ($broswer_type=='is_IE') ? '':' sticky';
+
+if( in_array('is_winIE',$classes) ||  in_array('is_IE',$classes) ) {
+    $is_sticky = '';
+} else {
+    $is_sticky = ' sticky';
+}
 
 if($bullets) {
     $links = array();
