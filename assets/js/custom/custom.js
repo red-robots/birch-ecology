@@ -7,35 +7,15 @@
 
 jQuery(document).ready(function ($) {
 	
-    
-    /* Sticky Sidebar */
-    var $sticky = $('.sticky, .ie_sidebar');
-    var $stickyrStopper = $('.sticky-stopper');
-    if (!!$sticky.offset()) { // make sure ".sticky" element exists
-        var generalSidebarHeight = $sticky.innerHeight();
-        var stickyTop = $sticky.offset().top;
-        var stickOffset = 0;
-        var stickyStopperPosition = $stickyrStopper.offset().top;
-        var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
-        var diff = stopPoint + stickOffset;
-
-        $(window).scroll(function(){ // scroll event
-            var windowTop = $(window).scrollTop(); // returns number
-            if (stopPoint < windowTop) {
-                $('.ie_sidebar').addClass('fixed');
-                $sticky.css({ position: 'absolute', top: diff, right:'3%'});
-                $sticky.removeClass('padTop');
-            } else if (stickyTop < windowTop+stickOffset) {
-                $sticky.css({ position: 'fixed', top: stickOffset, right:'3%' });
-                $sticky.addClass('padTop');
-            } else {
-                $sticky.css({position: 'absolute', top: 'initial', right:'3%'});
-                $sticky.removeClass('padTop');
-                $('.ie_sidebar').removeClass('fixed');
-            }
-        });
+    if( $("#secondary_mobile").length > 0 ) {
+        $('body').addClass('hasSidebar');
     }
- 
+
+    $(".sticky-sidebar").stick_in_parent({
+        recalc_every: 1,
+        bottoming: false
+    });
+    
     /* Smooth Scroll to Anchor */
     if( $('.services-item-section').length > 0 ) {
         $(window).scroll(function(){

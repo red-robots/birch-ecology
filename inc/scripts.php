@@ -20,6 +20,13 @@ function acstarter_scripts() {
 		);
 
 	wp_enqueue_script( 
+			'sticky-js', 
+			get_template_directory_uri() . '/assets/js/vendors/jquery.sticky-kit.min.js', 
+			array(), '20190110', 
+			true 
+		);
+
+	wp_enqueue_script( 
 			'acstarter-custom', 
 			get_template_directory_uri() . '/assets/js/custom.js', 
 			array(), '20120206', 

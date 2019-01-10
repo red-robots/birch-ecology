@@ -125,6 +125,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		opacity: 0.5;
 	}
 }
 
@@ -165,6 +166,13 @@ button.menu-toggle {
 		size: 20px;
 	}
 	
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+	}
+}
+
+.home #primary-menu > li:first-child {
+	display: inline-block;
 	@media screen and (min-width: $tabwidth) {
 		display: none;
 	}

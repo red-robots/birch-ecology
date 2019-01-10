@@ -17,7 +17,6 @@ $classes[] = join(' ', array_filter($browsers, function ($browser) {
 
 $broswer_type = ( isset($classes[0]) && $classes[0] ) ? $classes[0] : '';
 //$is_sticky = ($broswer_type=='is_IE' || $broswer_type=='is_winIE is_IE') ? ' ie_sidebar':' sticky';
-$is_sticky = ' sticky';
 
 if($bullets) {
     $links = array();
@@ -31,7 +30,7 @@ if($bullets) {
     }
 ?>
 <?php if($links) { ?>
-<aside id="secondary" class="widget-area desktop services-sidebar<?php echo $is_sticky;?>" role="complementary">
+<aside id="secondary" class="widget-area desktop services-sidebar sticky-sidebar" role="complementary">
 	<div class="widget service-side">
         <ul class="services_sublinks">
         <?php foreach($links as $a) { ?>

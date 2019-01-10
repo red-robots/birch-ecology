@@ -48,37 +48,42 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 			    ?>
 			    <?php if( $ser_loop->have_posts() ) { ?>
 			    
-			    <div class="hp-projects">
-        			<div class="container">
-        				<div class="wrapper">
-			        <?php while ($ser_loop->have_posts()) { $ser_loop->the_post() ; 
-			            
-			            //$feature_image = get_field('featured_image',get_the_ID());
-			            $feature_image = get_field('banner_image',get_the_ID());
-			            ?>
-			                <div class="col-three">
-			                    <div class="thumbnail">
-			                        <?php if($feature_image['url'] != ''){ ?>
-			                        <div class="img">
-			                            <img src="<?php echo $feature_image['url'];?>" alt="<?php echo $feature_image['alt'];?>" />
-			                        </div>
-			                        <?php } ?>
-			                        <h3><?php the_title();?></h3>
-			                        <?php 
-			                        if(get_the_content()){
-			                            echo '<p>'.mb_strimwidth(get_the_content(), 0, 158, '...').'</p>';
-			                        }
-			                        ?>
-			                        <a href="<?php the_permalink();?>" class="project-btn">VIEW PROJECT</a>
-			                        
-			                    </div>
-			                </div>
-			                
-			                
-			        <?php } 
-			        pagi_posts_nav();
-			        wp_reset_postdata();
-			        ?>
+			    <div class="hp-projects clear">
+        			<div class="container clear">
+        				<div class="wrapper clear">
+        					<div class="projectsList clear">
+					        <?php while ($ser_loop->have_posts()) { $ser_loop->the_post() ; 
+					            
+					            //$feature_image = get_field('featured_image',get_the_ID());
+					            $feature_image = get_field('banner_image',get_the_ID());
+					            ?>
+					                <div class="col-three">
+					                	<div class="inside clear">
+						                    <div class="thumbnail">
+						                        <?php if($feature_image['url'] != ''){ ?>
+						                        <div class="img">
+						                            <img src="<?php echo $feature_image['url'];?>" alt="<?php echo $feature_image['alt'];?>" />
+						                        </div>
+						                        <?php } ?>
+						                        <h3><?php the_title();?></h3>
+						                        <?php  if(get_the_content()){ ?>
+						                        <div class="excerpt">
+						                        	<p><?php echo mb_strimwidth(get_the_content(), 0, 158, '...'); ?></p>
+						                        </div>
+						                        <?php } ?>
+						                        <div class="buttondiv">
+						                       		<a href="<?php the_permalink();?>" class="project-btn">VIEW PROJECT</a>
+						                    	</div>
+						                    </div>
+					                	</div>
+					                </div>
+					                
+					                
+					        <?php } 
+					        	pagi_posts_nav();
+					        	wp_reset_postdata();
+					        ?>
+					    	</div>
 			        	</div>
 			        </div>
 			    </div>
