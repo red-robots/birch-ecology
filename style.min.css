@@ -1867,8 +1867,8 @@ p img.alignleft{position:relative;top:8px}
 .hp-banner .caption .banner-btn{font-size:33px;color:white;text-transform:uppercase;font-weight:700;display:inline-block;padding:14px 53px 12px 53px;border-radius:100px;border:2px #fff solid;background:rgba(255,255,255,0.31);margin-top:45px;line-height:40px}
 .hp-banner .caption .banner-btn:hover{background:#fff;color:#2a5570}
 .hp-who-we-are{padding-top:54px;padding-bottom:62px}
-.hp-who-we-are h2,.hp-service h2,.hp-projects h2{text-align:center;font-size:51px;text-transform:uppercase;color:#446e89;margin-bottom:12px}
-.hp-who-we-are p{font-size:18px;padding-left:140px;padding-right:140px;line-height:1.5;letter-spacing:.2px;margin-bottom:37px;color:#000}
+.hp-who-we-are h2,.hp-service h2,.hp-projects h2{text-align:center;font-size:51px;text-transform:uppercase;color:#446e89;margin-bottom:14px}
+.hp-who-we-are p{font-size:18px;padding-left:140px;padding-right:140px;line-height:1.4;letter-spacing:.2px;color:#000;margin-bottom:28px;margin-top:0}
 .hp-service{display:block;padding-top:56px;background:#f2f2f2;text-align:center;padding-bottom:65px}
 .hp-service h2{margin-bottom:80px}
 .hp-service a{position:relative;display:block;margin-bottom:50px}
@@ -1883,7 +1883,7 @@ p img.alignleft{position:relative;top:8px}
 .hp-content ul{list-style:none}
 .hp-content li{position:relative;padding-left:48px;font-size:28px;font-weight:700;line-height:44px}
 .hp-content li:before{content:"\f00c";font-family:'FontAwesome';position:absolute;left:0;top:0;font-weight:normal}
-.hp-projects{display:block;background:#f2f2f2;padding-top:52px;text-align:center;padding-bottom:74px}
+.hp-projects{display:block;background:#f2f2f2;padding-top:52px;text-align:center;padding-bottom:74px;margin-top:36px}
 .hp-projects h2{margin-bottom:60px}
 .col-three{display:inline-block;vertical-align:top;margin-right:-4px;margin-bottom:50px;width:33.33%;padding-left:25px;padding-right:25px;box-sizing:border-box;position:relative}
 .hp-projects .col-three{padding-left:27px;padding-right:27px}
@@ -2078,7 +2078,11 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 .services-sidebar.is_stuck{right:5%;position:fixed;height:100%;overflow:auto}
 .home-pg{position:relative}
 .single-project.hasSidebar #page,.single-service.hasSidebar #page{padding-top:53px}
-.single-project #secondary_mobile .widget-title{margin:0;padding-left:20px;padding-right:20px;font-size:18px}
+@media screen and (min-width:767px){.single-project.hasSidebar #page,.single-service.hasSidebar #page{padding-top:0}
+}.single-project #secondary_mobile .widget-title{margin:0;padding-left:20px;padding-right:20px;font-size:18px}
+.page-template-page-projects section.page{padding-bottom:0}
+.page-template-page-projects section.page .hp-projects{padding-bottom:25px}
+.single-project section.page{padding-bottom:75px}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

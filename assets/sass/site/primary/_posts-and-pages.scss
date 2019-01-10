@@ -421,6 +421,9 @@ a.post-edit-link {
 .single-project.hasSidebar #page,
 .single-service.hasSidebar #page {
     padding-top: 53px;
+    @media screen and (min-width: $tabwidth) {
+        padding-top: 0;
+    }
 }
 .single-project #secondary_mobile {
     .widget-title {
@@ -429,4 +432,14 @@ a.post-edit-link {
         padding-right: 20px;
         font-size: 18px;
     }
+}
+
+.page-template-page-projects section.page {
+    padding-bottom: 0;
+    .hp-projects {
+        padding-bottom: 25px;
+    }
+}
+.single-project section.page {
+    padding-bottom: 75px;
 }
