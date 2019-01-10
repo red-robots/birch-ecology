@@ -415,8 +415,11 @@ a.post-edit-link {
     height: 100%;
     overflow: auto;
 }
-.home-pg {
+.yes-image .home-pg {
     position: relative;
+    @media screen and (min-width: $midwidth) {
+        min-height: 700px;
+    }
 }
 .single-project.hasSidebar #page,
 .single-service.hasSidebar #page {

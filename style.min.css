@@ -2076,8 +2076,9 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 @media screen and (min-width:767px){.widget-area .widget-title{left:-28px;margin-left:0;margin-top:0}
 }.single-project .widget-area{margin-top:10px}
 .services-sidebar.is_stuck{right:5%;position:fixed;height:100%;overflow:auto}
-.home-pg{position:relative}
-.single-project.hasSidebar #page,.single-service.hasSidebar #page{padding-top:53px}
+.yes-image .home-pg{position:relative}
+@media screen and (min-width:980px){.yes-image .home-pg{min-height:700px}
+}.single-project.hasSidebar #page,.single-service.hasSidebar #page{padding-top:53px}
 @media screen and (min-width:767px){.single-project.hasSidebar #page,.single-service.hasSidebar #page{padding-top:0}
 }.single-project #secondary_mobile .widget-title{margin:0;padding-left:20px;padding-right:20px;font-size:18px}
 .page-template-page-projects section.page{padding-bottom:0}
