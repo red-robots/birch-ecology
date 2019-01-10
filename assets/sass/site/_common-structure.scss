@@ -21,7 +21,7 @@
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
-	padding: 20px;
+	padding: 0 20px;
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -541,7 +541,7 @@ article#page {
 	background-color: #fff;
 	padding: 5px 0;
 	@media screen and (min-width: $tabwidth) {
-		padding: 30px 0 0;
+		padding: 20px 0 0;
 	}
 	p, li {
 		font-size: 18px;

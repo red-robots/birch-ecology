@@ -1797,7 +1797,7 @@ html[xmlns] .flexslider .slides{display:block}
 .clear{clear:both}
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
-.wrapper{width:100%;margin:0 auto;padding:20px}
+.wrapper{width:100%;margin:0 auto;padding:0 20px}
 @media screen and (min-width:767px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:90%;padding:0}
 }section.intro{width:100%}
@@ -1986,7 +1986,7 @@ button.menu-toggle{background:#295570;padding:10px 30px !important}
 }.header{position:absolute;left:0;right:0;top:0;z-index:100}
 section.page{width:100%;background-color:#fff;float:left;padding:40px 0}
 article#page{width:100%;background-color:#fff;padding:5px 0}
-@media screen and (min-width:767px){article#page{padding:30px 0 0}
+@media screen and (min-width:767px){article#page{padding:20px 0 0}
 }article#page p,article#page li{font-size:18px}
 article#page ul{margin:0 0 20px 0;padding:0 0 0 40px}
 .sticky{display:block}
@@ -2012,7 +2012,7 @@ article#page ul{margin:0 0 20px 0;padding:0 0 0 40px}
 .page-link-list a:hover{text-decoration:underline}
 .type-page .wrapper{margin:0 auto}
 @media screen and (min-width:767px){.type-page .wrapper{width:60%}
-}.services-page .wrapper{padding-bottom:25px}
+}.services-page .wrapper{padding-top:0;padding-bottom:25px}
 .svc-info{padding-top:20px;padding-bottom:20px}
 @media screen and (min-width:767px){.svc-info{padding-top:30px;padding-bottom:30px}
 }.svc-info.first{padding-top:20px}

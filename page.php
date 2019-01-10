@@ -31,15 +31,13 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 	<div class="wrapper">
 		<div id="primary" class="content-area-full">
 			<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
-			?>
-
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if( get_the_content() ) { ?>
+						<div class="wrapper">
+							<?php get_template_part( 'template-parts/content', 'page' ); ?>
+						</div>
+					<?php } ?>
+				<?php endwhile; // End of the loop. ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 

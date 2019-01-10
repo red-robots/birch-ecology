@@ -23,17 +23,15 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 	
 		<div id="primary" class="content-area-full">
 			<main id="main" class="site-main" role="main">
-				<div class="wrapper">
-					<section class="intro">
-						<?php
-						while ( have_posts() ) : the_post();
-							if( get_the_content() ) {
-								get_template_part( 'template-parts/content', 'page' );
-							}
-						endwhile; // End of the loop.
-						?>
-					</section>
-				</div>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if( get_the_content() ) { ?>
+						<div class="wrapper">
+							<section class="intro">
+								<?php get_template_part( 'template-parts/content', 'page' ); ?>
+							</section>
+						</div>
+					<?php } ?>
+				<?php endwhile; // End of the loop. ?>
 			<?php 
 			
 
