@@ -443,3 +443,19 @@ a.post-edit-link {
 .single-project section.page {
     padding-bottom: 75px;
 }
+.page-template-page-services {
+    .hentry .wrapper {
+        padding-bottom: 0;
+    }
+    article#page {
+        padding-top: 20px;
+    }
+    section.page {
+        padding-bottom: 0;
+    }
+}
+.page-template-page-news {
+    section.page {
+        padding-bottom: 0;
+    }
+}

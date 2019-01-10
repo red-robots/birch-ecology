@@ -27,9 +27,9 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 					<section class="intro">
 						<?php
 						while ( have_posts() ) : the_post();
-
-							get_template_part( 'template-parts/content', 'page' );
-
+							if( get_the_content() ) {
+								get_template_part( 'template-parts/content', 'page' );
+							}
 						endwhile; // End of the loop.
 						?>
 					</section>

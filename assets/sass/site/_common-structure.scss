@@ -272,7 +272,7 @@ background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
 .hp-projects h2 {text-align: center; font-size: 51px; text-transform: uppercase; color: $color-blue; margin-bottom: 14px;}
 .hp-who-we-are p {font-size: 18px; padding-left: 140px; padding-right: 140px; line-height: 1.4; letter-spacing: 0.2px; color: #000;  margin-bottom: 28px; margin-top: 0; }
 
-.hp-service {display: block; padding-top: 56px; background:#f2f2f2; text-align: center; padding-bottom: 65px;}
+.hp-service {display: block; padding-top: 56px; background:#f2f2f2; text-align: center; padding-bottom: 0;}
 .hp-service h2 {margin-bottom: 80px;}
 .hp-service a {position: relative; display: block; margin-bottom: 50px;}
 .hp-service a:after {content: ""; background: rgba(0,0,0,0.2); position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
@@ -289,7 +289,7 @@ background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
 .hp-content li {position: relative; padding-left: 48px; font-size: 28px; font-weight: 700; line-height: 44px;}
 .hp-content li:before {content: "\f00c"; font-family: 'FontAwesome'; position: absolute; left: 0px; top: 0px; font-weight: normal;}
 
-.hp-projects {display: block; background: #f2f2f2; padding-top: 52px; text-align: center; padding-bottom:74px; margin-top: 36px;}
+.hp-projects {display: block; background: #f2f2f2; padding-top: 52px; text-align: center; padding-bottom:74px; margin-top: 38px;}
 .hp-projects h2 { margin-bottom: 60px;}
 
 .col-three {
@@ -541,7 +541,7 @@ article#page {
 	background-color: #fff;
 	padding: 5px 0;
 	@media screen and (min-width: $tabwidth) {
-		padding: 40px 0 0;
+		padding: 30px 0 0;
 	}
 	p, li {
 		font-size: 18px;

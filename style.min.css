@@ -1869,7 +1869,7 @@ p img.alignleft{position:relative;top:8px}
 .hp-who-we-are{padding-top:54px;padding-bottom:62px}
 .hp-who-we-are h2,.hp-service h2,.hp-projects h2{text-align:center;font-size:51px;text-transform:uppercase;color:#446e89;margin-bottom:14px}
 .hp-who-we-are p{font-size:18px;padding-left:140px;padding-right:140px;line-height:1.4;letter-spacing:.2px;color:#000;margin-bottom:28px;margin-top:0}
-.hp-service{display:block;padding-top:56px;background:#f2f2f2;text-align:center;padding-bottom:65px}
+.hp-service{display:block;padding-top:56px;background:#f2f2f2;text-align:center;padding-bottom:0}
 .hp-service h2{margin-bottom:80px}
 .hp-service a{position:relative;display:block;margin-bottom:50px}
 .hp-service a:after{content:"";background:rgba(0,0,0,0.2);position:absolute;left:0;right:0;top:0;bottom:0;-webkit-transition:all .5s ease;transition:all .5s ease}
@@ -1883,7 +1883,7 @@ p img.alignleft{position:relative;top:8px}
 .hp-content ul{list-style:none}
 .hp-content li{position:relative;padding-left:48px;font-size:28px;font-weight:700;line-height:44px}
 .hp-content li:before{content:"\f00c";font-family:'FontAwesome';position:absolute;left:0;top:0;font-weight:normal}
-.hp-projects{display:block;background:#f2f2f2;padding-top:52px;text-align:center;padding-bottom:74px;margin-top:36px}
+.hp-projects{display:block;background:#f2f2f2;padding-top:52px;text-align:center;padding-bottom:74px;margin-top:38px}
 .hp-projects h2{margin-bottom:60px}
 .col-three{display:inline-block;vertical-align:top;margin-right:-4px;margin-bottom:50px;width:33.33%;padding-left:25px;padding-right:25px;box-sizing:border-box;position:relative}
 .hp-projects .col-three{padding-left:27px;padding-right:27px}
@@ -1986,7 +1986,7 @@ button.menu-toggle{background:#295570;padding:10px 30px !important}
 }.header{position:absolute;left:0;right:0;top:0;z-index:100}
 section.page{width:100%;background-color:#fff;float:left;padding:40px 0}
 article#page{width:100%;background-color:#fff;padding:5px 0}
-@media screen and (min-width:767px){article#page{padding:40px 0 0}
+@media screen and (min-width:767px){article#page{padding:30px 0 0}
 }article#page p,article#page li{font-size:18px}
 article#page ul{margin:0 0 20px 0;padding:0 0 0 40px}
 .sticky{display:block}
@@ -2083,6 +2083,10 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 .page-template-page-projects section.page{padding-bottom:0}
 .page-template-page-projects section.page .hp-projects{padding-bottom:25px}
 .single-project section.page{padding-bottom:75px}
+.page-template-page-services .hentry .wrapper{padding-bottom:0}
+.page-template-page-services article#page{padding-top:20px}
+.page-template-page-services section.page{padding-bottom:0}
+.page-template-page-news section.page{padding-bottom:0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
