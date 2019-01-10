@@ -291,7 +291,9 @@ background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%);
 
 .hp-projects {display: block; background: #f2f2f2; padding-top: 52px; text-align: center; padding-bottom:74px; margin-top: 38px;}
 .hp-projects h2 { margin-bottom: 60px;}
-
+.home .hp-projects {
+	margin-top: 10px;
+}
 .col-three {
 	display: inline-block; 
 	vertical-align: top; 
