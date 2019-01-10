@@ -8,9 +8,7 @@
  */
 
 get_header(); 
-// wp_reset_query();
 $banner_image = get_field('banner_image');
-// echo $banner_image;
 if(!empty($banner_image) && $banner_image['url'] !=''){
 ?>
 <div class="home-pg">
