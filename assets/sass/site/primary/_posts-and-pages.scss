@@ -412,6 +412,8 @@ a.post-edit-link {
 .services-sidebar.is_stuck {
     right: 5%;
     position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 .home-pg {
     position: relative;
