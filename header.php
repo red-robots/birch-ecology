@@ -21,6 +21,17 @@
 <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 <!--<link href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" rel="stylesheet" />
 <link href="<?php echo get_template_directory_uri(); ?>/css/birch-ecology-custom.css" type="text/css" rel="stylesheet" />-->
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319747-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132319747-1');
+</script>
+
 
 
 <?php wp_head(); 
