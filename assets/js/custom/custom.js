@@ -6,6 +6,30 @@
  */
 
 jQuery(document).ready(function ($) {
+
+	var scrollTop = $(".scrollTop");
+    $(window).scroll(function() {
+        var topPos = $(this).scrollTop();
+        // if user scrolls down - show scroll to top button
+        if (topPos > 100) {
+          $(scrollTop).css({
+            "opacity":1,
+            "z-index":3000
+          });
+        } else {
+          $(scrollTop).css({
+            "opacity":0,
+            "z-index":"-999"
+          });
+        }
+    });
+
+    $(scrollTop).click(function() {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+    });
 	
     if( $("#secondary_mobile").length > 0 ) {
         $('body').addClass('hasSidebar');

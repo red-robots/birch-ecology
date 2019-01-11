@@ -187,6 +187,9 @@ a.post-edit-link {
     right: 0;
     width: 90%;
     z-index: 50;
+    .widget-area {
+        padding-top: 53px;
+    }
     &.small-screen {
         display: block;
     }
@@ -389,7 +392,7 @@ a.post-edit-link {
 }
 .widget-area {
     .widget-title {
-        font-size: 25px;
+        font-size: 22px;
         position: relative;
         left: 0;
         margin: 0 0 6px;
@@ -398,9 +401,12 @@ a.post-edit-link {
         margin-left: 15px;
         margin-top: 35px;
         @media screen and (min-width: $tabwidth) {
-            left: -28px;
+            font-size: 22px;
             margin-left: 0;
             margin-top:0;
+        }
+        @media screen and (min-width: $midwidth) {
+            font-size: 25px;
         }
     }
 }
@@ -408,19 +414,22 @@ a.post-edit-link {
     .widget-area {
         margin-top: 10px;
     }
-    
+    .services-sidebar .services_sublinks {
+        padding-left: 15px;
+    }
 }
 .services-sidebar.is_stuck {
-    right: 5%;
+    right: 20px;
     position: fixed;
     height: 100%;
     overflow: auto;
+    @media screen and (min-width: $deskwidth) {
+        right: 5%;
+    }
 }
 .yes-image .home-pg {
     position: relative;
-    @media screen and (min-width: $midwidth) {
-        min-height: 700px;
-    }
+    min-height: 300px;
 }
 .single-project.hasSidebar #page,
 .single-service.hasSidebar #page {
@@ -442,6 +451,10 @@ a.post-edit-link {
     padding-bottom: 0;
     .hp-projects {
         padding-bottom: 25px;
+        .wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 .single-project section.page {
@@ -462,4 +475,19 @@ a.post-edit-link {
     section.page {
         padding-bottom: 0;
     }
+}
+.services-rows {
+    text-align: center;
+    .col-three {
+        display: inline-block;
+        margin-bottom: 20px;
+        @media screen and (min-width: $tabwidth) {
+            margin-bottom: 25px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
 }

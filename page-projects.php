@@ -48,7 +48,7 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 			    <div class="hp-projects clear">
         			<div class="container clear">
         				<div class="wrapper clear">
-        					<div class="projectsList clear">
+        					<div class="projectsList row clear">
 					        <?php while ($ser_loop->have_posts()) { $ser_loop->the_post() ; 
 					            
 					            //$feature_image = get_field('featured_image',get_the_ID());

@@ -39,6 +39,8 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<a href="#" id="scrollTop" class="scrollTop"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
+
 <?php wp_footer(); ?>
 
 <script>

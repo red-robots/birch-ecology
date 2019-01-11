@@ -26,15 +26,17 @@ get_header(); ?>
     <div class="hp-banner">
         <a href="<?php echo $button_link;?>"><img src="<?php echo $banner_image['url'];?>" alt="<?php echo $banner_image['title'];?>">
         <div class="caption">
-            <?php if($main_title !='' ){?>
-                <h2><?php echo $main_title;?></h2>
-            <?php } ?>
-            <?php if($sub_title !='' ){ ?>
-                <p><?php echo $sub_title;?></p>
-            <?php } ?>
-            <?php if($button_text !='' && $button_link !='' ){ ?>
-                <span class="banner-btn"><?php echo $button_text;?></span>
-            <?php } ?>
+            <div class="inside clear">
+                <?php if($main_title !='' ){?>
+                    <h2><?php echo $main_title;?></h2>
+                <?php } ?>
+                <?php if($sub_title !='' ){ ?>
+                    <p><?php echo $sub_title;?></p>
+                <?php } ?>
+                <?php if($button_text !='' && $button_link !='' ){ ?>
+                    <span class="banner-btn"><?php echo $button_text;?></span>
+                <?php } ?>
+            </div>
         </div>
         </a>
     </div>
@@ -67,7 +69,7 @@ get_header(); ?>
     <div class="hp-service">
         <div class="container">
             <h2>Our Services</h2>
-            <div class="row">
+            <div class="row clear services-rows">
                 <?php echo do_shortcode('[our_service]'); ?>
             </div>
         </div>
@@ -116,7 +118,7 @@ get_header(); ?>
     <div class="hp-projects">
         <div class="container">
             <?php if($section_title_2 != ''){ echo '<h2>'.$section_title_2.'</h2>'; } ?>
-            <div class="row">
+            <div class="row projectsList clear">
             <?php //echo do_shortcode('[our_project]'); ?>
             <?php if($featured_projects) { ?>
                 <?php foreach($featured_projects as $p) { 
@@ -124,19 +126,23 @@ get_header(); ?>
                     $project_info = $p->post_content;
                     $project_image = get_field('banner_image', $post_id); ?>
                     <div class="col-three">
-                        <div class="thumbnail">
-                            <?php if($project_image){ ?>
-                                <div class="img">
-                                    <img src="<?php echo $project_image['url'];?>" alt="<?php echo $project_image['title'];?>" />
+                        <div class="inside clear">
+                            <div class="thumbnail">
+                                <?php if($project_image){ ?>
+                                    <div class="img">
+                                        <img src="<?php echo $project_image['url'];?>" alt="<?php echo $project_image['title'];?>" />
+                                    </div>
+                                <?php } ?>
+                                <h3><?php echo $p->post_title?></h3>
+                                <?php if($project_info){ ?>
+                                <div class="excerpt">
+                                    <p><?php echo mb_strimwidth($project_info, 0, 158, '...'); ?></p>
                                 </div>
-                            <?php } ?>
-                            <h3><?php echo $p->post_title?></h3>
-                            <?php 
-                            if($project_info){
-                                echo '<p>'.mb_strimwidth($project_info, 0, 158, '...').'</p>';
-                            }
-                            ?>
-                            <a href="<?php echo get_the_permalink($post_id);?>" class="project-btn">VIEW PROJECT</a>
+                                <?php } ?>
+                                <div class="buttondiv">
+                                    <a href="<?php echo get_the_permalink($post_id);?>" class="project-btn">VIEW PROJECT</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
