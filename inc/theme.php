@@ -6,7 +6,7 @@
  *
  * @package ACStarter
  */
-
+@ini_set( 'upload_max_size' , '64M' );
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
