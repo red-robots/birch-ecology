@@ -489,5 +489,12 @@ a.post-edit-link {
             height: auto;
         }
     }
-
+}
+.site-footer .footlink {
+    text-decoration: none;
+    color: #7fc4f1;
+    transition: all ease-out .3s;
+    &:hover {
+        color: #d2ebfb;
+    }
 }

@@ -13,9 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-	
-            
+	<footer id="colophon" class="site-footer" role="contentinfo"> 
             <?php
                 $footer_creds = get_field('footer_creds');
             ?>
@@ -34,6 +32,7 @@
                         echo '&copy; '.date('Y').' - Birch Ecology. <br>All Rights Reserved.';
                     }
                     ?>
+                    <a class="footlink" href="<?php echo get_site_url()?>/sitemap/">Sitemap</a>
                 </div><!-- .site-info -->
             </div><!-- wrapper -->
 	</footer><!-- #colophon -->

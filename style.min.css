@@ -2099,6 +2099,8 @@ a.post-edit-link{color:#86331b;text-decoration:underline}
 .services-rows .col-three{display:inline-block;margin-bottom:20px}
 @media screen and (min-width:768px){.services-rows .col-three{margin-bottom:25px}
 }.services-rows .col-three img{width:100%;height:auto}
+.site-footer .footlink{text-decoration:none;color:#7fc4f1;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.site-footer .footlink:hover{color:#d2ebfb}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
