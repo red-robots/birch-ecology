@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="full-content-area clear">
 		<main id="main" class="site-main clear" role="main">
 
 			<section class="error-404 not-found clear">

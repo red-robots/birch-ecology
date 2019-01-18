@@ -120,12 +120,14 @@ add_shortcode( 'our_project', 'our_project_func' );
 //remove_filter ('acf_the_content', 'wpautop');
 
 /* GENERATE SITEMAP */
-function generate_sitemap() {
+function generate_sitemap($menuName='top-menu',$pageWithCats=null,$orderByNavi=null) {
     global $wpdb;
     $lists = array();
-    $menus = wp_get_nav_menu_items('main-menu');
+    $menus = wp_get_nav_menu_items($menuName);
     $menu_orders = array();
     $menu_with_children = array();
+    $navi_order = array();
+
     if($menus) {
         $i=0;
         foreach($menus as $m) {
@@ -134,6 +136,7 @@ function generate_sitemap() {
             $page_url = $m->url;
             $post_parent = $m->post_parent;
             $submenu = array();
+            $navi_order[] = $page_id;
             if($post_parent) {
                 $submenu = array(
                         'id'=>$page_id,
@@ -146,12 +149,13 @@ function generate_sitemap() {
             } 
             $i++;
         }
-    }
+    }    
     
     $results = $wpdb->get_results( "SELECT ID,post_title FROM {$wpdb->prefix}posts WHERE post_type = 'page' AND post_status='publish' AND post_parent=0 ORDER BY post_title ASC", OBJECT );
     $childPages = $wpdb->get_results( "SELECT ID,post_title,post_parent as parent_id FROM {$wpdb->prefix}posts WHERE post_type = 'page' AND post_status='publish' AND post_parent>0 ORDER BY post_title ASC", OBJECT );
     $childrenList = array();
     $childrenAll = array();
+
     /* child pages */
     if($childPages) {
         foreach($childPages as $cp) {
@@ -170,15 +174,24 @@ function generate_sitemap() {
         }
     }
 
+    
+
     if($results) {
         foreach($results as $row) {
             $id = $row->ID;
             $page_title = $row->post_title;
             $page_link = get_permalink($id);
-            if(array_key_exists($id,$menu_orders)) {
-                $page_title = $menu_orders[$id];
+        
+            if($menu_orders) {
+                $first_menu = array_values($menu_orders)[0];
+                if($page_title=='Homepage') {
+                    $page_title = $first_menu;
+                }
+                if(array_key_exists($id,$menu_orders)) {
+                    $page_title = $menu_orders[$id];
+                }
             }
-            
+
             $lists[$id]['parent_id'] = $id;
             $lists[$id]['parent_title'] = $page_title;
             $lists[$id]['parent_url'] = $page_link;
@@ -213,17 +226,87 @@ function generate_sitemap() {
                     $lists[$id]['children'] = $c_obj;
                 }
             }
-            
-            /* Blog or News Categories */
-            $news_ID = 7;
-            if($id == $news_ID) {
-                $cat_args = array('hide_empty' => 1, 'parent' => 0, 'exclude'=>1);
-                $lists[$id]['categories'] = get_categories($cat_args);
+
+
+            if($pageWithCats) {
+                foreach($pageWithCats as $p) {
+                    $pageid = $p['id'];
+                    $taxo = (isset($p['taxonomy']) && $p['taxonomy']) ? $p['taxonomy'] : '';
+                    $post_type = (isset($p['post_type']) && $p['post_type']) ? $p['post_type'] : '';
+                    if($pageid==$id) {
+                        if($taxo) {
+                            $o_terms = get_terms( array(
+                                'taxonomy' => $taxo,
+                                'hide_empty' => false,
+                            ) );
+                            if($o_terms){
+                                foreach ($o_terms as $t) {
+                                    $term_id = $t->term_id;
+                                    $term_name = $t->name;
+                                }
+                                $lists[$id]['categories'] = $o_terms;
+                            }
+                        }
+                        if($post_type) {
+                            $args = array(
+                                'posts_per_page'    => -1,
+                                'post_type'         => $post_type,
+                                'post_status'       => 'publish'  
+                            );
+                            $p_posts = get_posts($args);
+                            if($p_posts) {
+                                $p_children = array();
+                                foreach($p_posts as $pp) {
+                                    $p_children[] = array(
+                                            'title'=>$pp->post_title,
+                                            'url'=> get_permalink($pp->ID)
+                                        );
+                                }
+                                $lists[$id]['children'] = $p_children;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // $cat_args = array('hide_empty' => 1, 'parent' => 0, 'exclude'=>array(1));
+            // $i_parent_ID = 8; /* Artwork page */
+            // $artwork_terms = get_terms( array(
+            //     'taxonomy' => 'arttypes',
+            //     'hide_empty' => false,
+            // ));
+            // if($id == $i_parent_ID) {
+            //     $lists[$id]['categories'] = $artwork_terms;
+            // }
+        }   
+    }
+
+    $new_list = array();
+    if($orderByNavi && $menus && $lists) {
+        // foreach($lists as $x_id=>$x_vars) {
+        //     if(in_array($x_id, $navi_order)) {
+        //         print_r($x_vars);
+        //     }
+        // }
+
+        foreach($navi_order as $x_id) {
+            if( array_key_exists($x_id, $lists) ) {
+                $new_items = $lists[$x_id];
+                $new_list[$x_id] = $new_items;
+            } 
+        }
+
+        foreach($lists as $k_id=>$k_vars) {
+            if( !in_array($k_id, $orderByNavi) ) {
+                $new_list[$k_id] = $k_vars;
             }
         }
     }
-    
-    return $lists;
-    
+
+    if($new_list) {
+        return $new_list;   
+    } else {
+        return $lists;   
+    }
 }
 

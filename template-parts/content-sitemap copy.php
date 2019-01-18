@@ -1,8 +1,7 @@
 <?php
-$post_type_with_categories[] = array('id'=>5,'post_type'=>'service');
-$links = generate_sitemap('Main',$post_type_with_categories,true);
+$links = generate_sitemap();
 if($links) { ?>
-    <div class="page-link-list clear">
+    <div class="page-link-list">
         <ul class="linklist">
         <?php foreach($links as $a) {
             $parent_id = $a['parent_id'];
@@ -11,7 +10,7 @@ if($links) { ?>
             $parent = get_the_title();
             $children  = ( isset($a['children']) ) ? $a['children'] : '';
             $categories  = ( isset($a['categories']) ) ? $a['categories'] : '';
-            if($parent_title!=='Sitemap') {  ?>
+        ?>
             <li>
                 <a class="parentlink"  href="<?php echo $parent_url; ?>"><?php echo $parent_title;?></a>
                 <?php if($children) { ?>
@@ -34,7 +33,6 @@ if($links) { ?>
                 </ul>
                 <?php } ?>
             </li>
-            <?php } ?>
         <?php } ?>
         </ul>    
     </div>

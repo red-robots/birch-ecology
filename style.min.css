@@ -2008,8 +2008,8 @@ article#page ul{margin:0 0 20px 0;padding:0 0 0 40px}
 .error404 .error-404{max-width:800px;width:100%;margin:0 auto 0;padding-top:100px;padding-bottom:100px}
 .error404 .page-title{font-size:30px}
 .page-link-list ul{margin:0;padding:0;list-style:none}
-.page-link-list ul ul{padding-bottom:5px}
-.page-link-list li{position:relative;padding-left:20px}
+.page-link-list ul ul{padding-bottom:5px;margin-left:15px}
+.page-link-list li{position:relative;padding-left:18px}
 .page-link-list li:before{content:"";width:8px;height:8px;background:#86331b;border-radius:100px;position:absolute;top:10px;left:0}
 .page-link-list a{font-size:20px;text-decoration:none;color:#86331b}
 .page-link-list a:hover{text-decoration:underline}

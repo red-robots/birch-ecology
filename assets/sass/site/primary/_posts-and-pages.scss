@@ -81,11 +81,12 @@
         list-style: none;
         ul {
             padding-bottom: 5px;
+            margin-left: 15px;
         }
     }
     li {
         position: relative;
-        padding-left: 20px;
+        padding-left: 18px;
         &:before {
             content:"";
             width: 8px;
