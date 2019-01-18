@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="full-content-area clear">
 		<main id="main" class="site-main clear" role="main">
 
@@ -25,6 +24,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_footer();
