@@ -136,7 +136,8 @@ get_header(); ?>
                                 <h3><?php echo $p->post_title?></h3>
                                 <?php if($project_info){ ?>
                                 <div class="excerpt">
-                                    <p><?php echo mb_strimwidth($project_info, 0, 158, '...'); ?></p>
+                                    <!-- <p><?php echo mb_strimwidth($project_info, 0, 158, '...'); ?></p> -->
+                                    <?php the_excerpt(); ?>
                                 </div>
                                 <?php } ?>
                                 <div class="buttondiv">

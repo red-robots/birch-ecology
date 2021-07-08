@@ -63,7 +63,8 @@ if(!empty($banner_image) && $banner_image['url'] !=''){
 			                        <h3><?php the_title();?></h3>
 			                        <?php 
 			                        if(get_the_content()){
-			                            echo '<p>'.mb_strimwidth(get_the_content(), 0, 158, '...').'</p>';
+			                            //echo '<p>'.mb_strimwidth(get_the_content(), 0, 158, '...').'</p>';
+			                            the_excerpt();
 			                        }
 			                        ?>
 			                        <a href="<?php the_permalink();?>" class="project-btn">READ MORE</a>
